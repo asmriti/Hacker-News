@@ -3,4 +3,8 @@ export type Story = {
   by: string;
   title: string;
   url: string;
+  score: number;
+  descendants: string;
+  type: string;
+  kids: number[];
 };

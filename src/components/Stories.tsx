@@ -8,7 +8,7 @@ import HackerNewsItem from "./HackerNewsItem";
 function Stories() {
   const [topStories, setTopStories] = useState<number[]>([]);
   const [stories, setStories] = useState<Story[]>([]);
-  const [pageNumber, setPageNumber] = useState(1);
+  // const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
     fetchTopStories().then((data) => setTopStories(data));
@@ -21,9 +21,9 @@ function Stories() {
   }, [topStories]);
 
   return (
-    <div>
-      {stories.map((items, index) => (
-        <HackerNewsItem key={index} />
+    <div className="mx-auto container">
+      {stories.map((story, index) => (
+        <HackerNewsItem key={story.id} story={story} />
       ))}
     </div>
   );
