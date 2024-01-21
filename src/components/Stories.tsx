@@ -50,7 +50,7 @@ function Stories() {
         </button>
       </div>
       {stories.map((story, index) => (
-        <HackerNewsItem key={story.id} story={story} />
+        <HackerNewsItem key={index} story={story} />
       ))}
     </div>
   );
