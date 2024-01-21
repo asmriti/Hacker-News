@@ -3,8 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
-      padding: "2rem",
-      maxWidth: "1170px",
+      padding: "3rem",
+      maxWidth: "1100px",
     },
     extend: {},
   },

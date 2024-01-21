@@ -4,10 +4,10 @@ import Stories from "./components/Stories";
 
 function App() {
   return (
-    <>
+    <div className="mx-auto container">
       <Header />
       <Stories />
-    </>
+    </div>
   );
 }
 

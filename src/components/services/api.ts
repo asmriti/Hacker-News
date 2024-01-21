@@ -17,6 +17,10 @@ export async function fetchStory(id: number): Promise<Story> {
     by: storyData.by,
     title: storyData.title,
     url: storyData.url,
+    score: storyData.score,
+    descendants: storyData.descendants,
+    type: storyData.type,
+    kids: storyData.kids,
   };
   return story;
 }
