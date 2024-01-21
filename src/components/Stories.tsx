@@ -42,10 +42,16 @@ function Stories() {
   return (
     <div className="">
       <div className="flex justify-end gap-2">
-        <button onClick={handlePrevClick} className="">
-          <FontAwesomeIcon icon={faArrowAltCircleLeft} className="h-7" />
+        <button
+          onClick={handlePrevClick}
+          className="transition-transform hover:scale-110 "
+        >
+          <FontAwesomeIcon icon={faArrowAltCircleLeft} className="h-7 " />
         </button>
-        <button onClick={handleNextClick} className="">
+        <button
+          onClick={handleNextClick}
+          className="transition-transform hover:scale-110"
+        >
           <FontAwesomeIcon icon={faArrowAltCircleRight} className="h-7" />
         </button>
       </div>

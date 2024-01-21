@@ -9,7 +9,7 @@ type Props = {
 function HackerNewsItem(props: Props) {
   return (
     // border-b-indigo-500 border-r-indigo-500 border-b-4
-    <div className="p-8  border-r-4 border-l-4 m-4 rounded-xl">
+    <div className="p-8 m-4 rounded-xl shadow-lg shadow-[#000000]">
       <div className="">
         <a className="cursor-pointer text-2xl font-bold" href={props.story.url}>
           {props.story.title}
