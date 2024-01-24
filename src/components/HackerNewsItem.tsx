@@ -1,6 +1,7 @@
 import { Story } from "../types";
 import { faComment, faUser } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 type Props = {
   story: Story;
@@ -8,13 +9,12 @@ type Props = {
 
 function HackerNewsItem(props: Props) {
   return (
-    // border-b-indigo-500 border-r-indigo-500 border-b-4
-    <div className="p-8 m-4 rounded-xl shadow-lg shadow-[#000000]">
-      <div className="">
+    <div className="p-8 m-4 rounded-xl shadow-lg shadow-[#000000] hover:scale-105">
+      <Link to={`/story/${props.story.id}`}>
         <a className="cursor-pointer text-2xl font-bold" href={props.story.url}>
           {props.story.title}
         </a>
-      </div>
+      </Link>
 
       <ul className="flex justify-start items-center gap-6 mt-2">
         <li>

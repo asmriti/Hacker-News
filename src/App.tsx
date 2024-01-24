@@ -1,13 +1,16 @@
 import "./App.css";
-import Header from "./components/Header";
-import Stories from "./components/Stories";
+import Layout from "./components/Layout";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import StoryDetails from "./components/StoryDetails";
 
 function App() {
   return (
-    <div className="mx-auto container">
-      <Header />
-      <Stories />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/storypage" element={<StoryDetails />} />
+      </Routes>
+    </Router>
   );
 }
 
