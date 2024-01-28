@@ -1,4 +1,4 @@
-import { Story } from "../../types.ts";
+import { Story } from "../../types/Story.ts";
 
 const hackerNews = "https://hacker-news.firebaseio.com/v0";
 

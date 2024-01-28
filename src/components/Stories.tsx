@@ -1,6 +1,6 @@
 // Body of HackerNews
 
-import { Story } from "../types";
+import { Story } from "../types/Story";
 import { useEffect, useState } from "react";
 import HackerNewsItem from "./HackerNewsItem";
 import {
