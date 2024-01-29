@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { fetchComment } from "./services/api";
 import { Comment } from "../types/Comments";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 type Props = {
   commentId: number[];
@@ -31,11 +33,18 @@ function Comments(props: Props) {
 
   return (
     <div>
-      <ul className="px-2 py-3  border-l m-6">
+      <ul className="px-2  border-l-[1px] ml-6">
         {comments.map((comment) => (
-          <li key={comment.id}>
-            {comment?.text}
-            {comment?.by}
+          <li key={comment.id} className="">
+            <div
+              className=" mb-1"
+              dangerouslySetInnerHTML={{ __html: comment?.text }}
+            ></div>
+            {/* {comment?.text} */}
+            <div className="font-bold mb-4">
+              <FontAwesomeIcon icon={faUser} className="mr-2" /> {comment.by}
+            </div>
+
             {comment.kids && !!comment.kids.length && (
               <Comments
                 className="px-6 border-b m-6"
