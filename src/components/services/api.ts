@@ -1,5 +1,5 @@
-import { Comment } from "../../types/Comments.ts";
 import { Story } from "../../types/Story.ts";
+import { Comment } from "../../types/Comments.ts";
 
 const hackerNews = "https://hacker-news.firebaseio.com/v0";
 
@@ -30,23 +30,6 @@ export const fetchStories = async (ids: number[]): Promise<Story[]> => {
   const stories = await Promise.all(ids.map(fetchStory));
   return stories;
 };
-
-// export async function fetchComment(id: number): Promise<Comment> {
-//   const response = await fetch(`${hackerNews}/item/${id}.json`);
-//   const commentData = await response.json();
-
-//   const comment: Comment = {
-//     id: commentData.id,
-//     by: commentData.by,
-//     text: commentData.text,
-//     kids: commentData.kids || [],
-//     parent: commentData.parent,
-//     time: commentData.time,
-//     type: commentData.type,
-//   };
-
-//   return comment;
-// }
 
 export const fetchComment = async (id: number): Promise<Comment> => {
   const url = `https://hacker-news.firebaseio.com/v0/item/${id}.json`;

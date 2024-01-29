@@ -1,11 +1,11 @@
 // StoryDetails.tsx
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { fetchStory } from "./services/api";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Story } from "../types/Story";
 import Comments from "./Comments";
+import { Story } from "../types/Story";
+import { fetchStory } from "./services/api";
+import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faUser } from "@fortawesome/free-regular-svg-icons";
 

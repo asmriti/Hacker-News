@@ -7,8 +7,8 @@ import {
   faArrowAltCircleLeft,
   faArrowAltCircleRight,
 } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fetchTopStories, fetchStories } from "./services/api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Stories() {
   const [topStories, setTopStories] = useState<number[]>([]);

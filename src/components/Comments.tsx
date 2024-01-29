@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { fetchComment } from "./services/api";
 import { Comment } from "../types/Comments";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fetchComment } from "./services/api";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type Props = {
   commentId: number[];
-  className: string;
-  commentBy: string;
+  className?: string;
+  commentBy?: string;
 };
 
 function Comments(props: Props) {
