@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Comment } from "../types/Comments";
 import { fetchComment } from "./services/api";
 import { faUser } from "@fortawesome/free-regular-svg-icons";

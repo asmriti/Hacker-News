@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./Header";
 import Stories from "./Stories";
 import Footer from "./Footer";
